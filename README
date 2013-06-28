@@ -1,0 +1,40 @@
+	Articles de la revue Commentaire en version mobile
+
+La revue Commentaire a été fondée par Raymond Aron en 1978. La revue a
+édité en 2009 un DVD comprenant la collection intégrale des numéros de
+1978 à 2009. Un programme sur le DVD permet d'imprimer tous les
+articles au format pdf. Cependant, le résultat est peu pratique pour
+une lecture sur un mobile (par exemple sur un Kindle), car les
+caractères sont trop petits. On ne peut pas changer le format de la
+page car il s'agit d'une version scannée de la revue.
+
+Le but de ce programme est de produire un fichier pdf contenant un ou
+plusieurs articles (par exemple tous les articles d'un même auteur, ou
+bien tous les articles d'un numéro ou d'une année), et cela avec un
+format adapté à une version mobile.
+
+Pour cela, on s'appuie sur la reconnaissance de caractère déjà
+effectuée lors de la production du DVD. En effet le DVD contient (dans
+des fichier xml) la position de chaque mot à l'intérieur d'une page. On
+s'appuie donc sur cette information pour reconstruire des pages plus
+petites et adaptées à la lecture sur un mobile.
+
+Le programme est en version expérimentale et produit un résultat
+encore imparfait, mais utilisable.  
+
+Note: le programme nécessite le DVD de Commentaire. La reproduction du
+DVD Commentaire étant interdite, le programme ne contient aucune
+information présente sur le DVD.
+
+* Utilisation:
+
+On suppose que le contenu du DVD de Commentaire a été copié dans le
+répertoire ~/CommentaireDVD.
+
+Lancer:
+
+make
+
+Le programme crée les fichiers commentaire1978.pdf jusqu'à
+commentaire2009.pdf, avec tous les articles d'une année. On utilise
+pdflatex pour la table des matières et la concaténation des articles.
